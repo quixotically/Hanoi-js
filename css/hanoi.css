@@ -27,6 +27,12 @@ body {
   font-size: 36px;
 }
 
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .hanoi-title {
   text-align: center;
   margin-top: 72px;
