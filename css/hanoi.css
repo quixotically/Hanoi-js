@@ -1,5 +1,5 @@
 /* Reset */
-figure, h1, ul, li {
+figure, h1, h2, ul, li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -36,8 +36,9 @@ body {
 .hanoi-title {
   text-align: center;
   margin-top: 72px;
-  margin-bottom: 200px;
+  margin-bottom: 72px;
   font-weight: 700;
+  font-size: 54px;
 }
 
 .hanoi-stacks {
@@ -50,12 +51,15 @@ body {
   position: relative;
   float: left;
   width: 200px;
+  height: 200px;
   margin: 10px;
   border-bottom: 10px solid black;
+  cursor: pointer;
 }
 
 .hanoi-disks {
   position: absolute;
+  width: 200px;
   bottom: 0;
 }
 
