@@ -1,0 +1,75 @@
+/* Reset */
+figure, h1, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  text-align: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Styles */
+
+body {
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+.hanoi-title {
+  text-align: center;
+  margin-top: 72px;
+  margin-bottom: 200px;
+  font-weight: 700;
+}
+
+.hanoi-stacks {
+  margin: auto;
+  width: 660px;
+}
+
+.hanoi-stack {
+  display: block;
+  position: relative;
+  float: left;
+  width: 200px;
+  margin: 10px;
+  border-bottom: 10px solid black;
+}
+
+.hanoi-disks {
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.hanoi-disks > li {
+  display: block;
+  height: 40px;
+  background: #aaa;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.hanoi-disks > li.big {
+  width: 200px;
+}
+
+.hanoi-disks > li.med {
+  width: 125px;
+}
+
+.hanoi-disks > li.small {
+  width: 75px;
+}
