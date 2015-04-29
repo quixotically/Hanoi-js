@@ -7,6 +7,11 @@
   var View = Hanoi.View = function (game, $el) {
     this.game = game;
     this.$el = $el;
+    this.disks = {
+      3: $('<li class="big"></li>'),
+      2: $('<li class="med"></li>'),
+      1: $('<li class="small"></li>')
+    };
   };
 
   View.prototype.setupTowers = function () {
