@@ -28,7 +28,9 @@
     var view = this;
 
     this.game.towers.forEach( function (tower) {
-      var towerReversed = tower.reverse();
+      var towerReversed = tower.slice();
+      towerReversed.reverse();
+
       towerReversed.forEach(function (disk) {
         $stacks.eq(i).append(view.disks[disk]);
       });
