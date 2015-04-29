@@ -83,3 +83,11 @@ body {
 .hanoi-disks > li.small {
   width: 75px;
 }
+
+.verdict {
+  display: block;
+  color: blue;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+}
