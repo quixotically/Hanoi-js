@@ -15,17 +15,21 @@
   };
 
   View.prototype.setupTowers = function () {
-
-    var $firstStack = this.$el.find('.hanoi-stack').eq(0);
-    var $firstDisks = $firstStack.find('.hanoi-disks')
-    var $largeDisk = $('<li></li>');
-    $largeDisk.addClass('big');
-    var $mediumDisk = $('<li></li>');
-    $mediumDisk.addClass('med');
-    var $smallDisk = $('<li></li>');
-    $smallDisk.addClass('small');
-    $firstDisks.append($smallDisk, $mediumDisk, $largeDisk);
-
+    this.render();
   };
 
+  View.prototype.render = function () {
+    var i = 0;
+    var $stacks = this.$el.find('.hanoi-disks');
+    var view = this;
+
+    this.game.towers.forEach( function (tower) {
+      var towerReversed = tower.reverse();
+      towerReversed.forEach(function (disk) {
+        $stacks.eq(i).append(view.disks[disk]);
+      });
+
+      i++;
+    });
+  };
 }());
