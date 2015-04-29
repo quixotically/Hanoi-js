@@ -50,7 +50,7 @@ body {
 
 .hanoi-disks {
   position: absolute;
-  transform: translateY(-100%);
+  bottom: 0;
 }
 
 .hanoi-disks > li {
