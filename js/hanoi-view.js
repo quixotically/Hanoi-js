@@ -38,4 +38,34 @@
       i++;
     });
   };
+
+  View.prototype.bindEventHandlers = function () {
+    var $stacks = this.$el.find('.hanoi-stack');
+    var view = this;
+
+    $stacks.on("click", function (event) {
+      if (view.clickedStackNumber >= 0) {
+        if (!view.game.move(view.clickedStackNumber, $stacks.index(this))) {
+          alert("Not a valid move!");
+        }
+
+        view.clickedStackNumber = -1;
+      } else {
+        view.clickedStackNumber = $stacks.index(this);
+      }
+
+      view.render();
+      view.gameOver();
+    });
+
+  };
+
+  View.prototype.gameOver = function () {
+    if (this.game.isWon()) {
+      var $verdict = $('<h2 class="verdict">You won!</h2>');
+      this.$el.append($verdict);
+      var $stacks = this.$el.find('.hanoi-stack');
+      $stacks.off();
+    }
+  }
 }());
