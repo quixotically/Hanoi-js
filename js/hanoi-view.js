@@ -5,14 +5,22 @@
   }
 
   var View = Hanoi.View = function (game, $el) {
-
     this.game = game;
     this.$el = $el;
-
   };
 
   View.prototype.setupTowers = function () {
-    
+
+    var $firstStack = this.$el.find('.hanoi-stack').eq(0);
+    var $firstDisks = $firstStack.find('.hanoi-disks')
+    var $largeDisk = $('<li></li>');
+    $largeDisk.addClass('big');
+    var $mediumDisk = $('<li></li>');
+    $mediumDisk.addClass('med');
+    var $smallDisk = $('<li></li>');
+    $smallDisk.addClass('small');
+    $firstDisks.append($smallDisk, $mediumDisk, $largeDisk);
+
   };
 
 }());
