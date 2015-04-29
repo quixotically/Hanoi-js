@@ -12,6 +12,10 @@
       2: $('<li class="med"></li>'),
       1: $('<li class="small"></li>')
     };
+
+    this.clickedStackNumber = -1;
+    this.bindEventHandlers();
+    this.setupTowers();
   };
 
   View.prototype.setupTowers = function () {
